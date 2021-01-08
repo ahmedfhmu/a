@@ -1,6 +1,6 @@
 <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST') 
-    { //Post لو الطلب بطريقة ال 
+    if($_SERVER['REQUEST_METHOD'] == 'POST') { 
+
 
             $user = $_POST['username'];
             $email = $_POST['email'];
@@ -10,8 +10,7 @@
             //eror
             $formEror = array();
 
-                if (strlen($user)<=3)
-                {
+                if (strlen($user)<=3) {
                     $formEror[] ='Characters must be at least 4 characters long '; 
                 }
 
@@ -20,13 +19,16 @@
                     $formEror[] ='Characters must be at least 11 characters long '; 
                 }
 
-                $headers ='from' .$email .'\r\n';
-                $myemail ='bookfhmto22@gmail.com';
-                $subject = 'contact form';
-               if(empty($formEror)) {//فى حالة عدم وجود خطأ
-                mail('$myemail','subject' , $masge ,$headers) ;
+                $headers ='from:' .$email . '\r\n'; //from اميل المرسل
+                $myemail ='bookfhmto22@gmail.com';//الى اميلك
+                $subject = 'contact form';//طباعة الجملة +نص ال texteare
+               if(empty($formEror)) {
+                echo "$myemail <br>";
+                echo "$subject  <br>";
+                echo "$masge <br>";
+                echo "$headers <br>";
+                mail('$myemail','$subject' , $masge ,$headers) ;
                }
-              
     }
 ?>
 
@@ -83,7 +85,9 @@
             </textarea>
             <br>
             
-        <input class="btn -success" type="submit" value="sen message"/>
+        <input class="btn -success" 
+        type="submit" 
+        value="sen message"/>
             </form>
     </div>
     
