@@ -1,2 +1,0 @@
-# moga
-my prokect
