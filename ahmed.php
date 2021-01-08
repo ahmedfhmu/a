@@ -30,7 +30,7 @@
                 mail('$myemail','$subject' , $masge ,$headers) ;
                }
     }
-?>
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
