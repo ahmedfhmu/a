@@ -56,7 +56,7 @@
 
 
 
-    </div>
+     </div>
             <form class="contact-from"  action="<?php $_SERVER['PHP_SELF']?>" method="post">
             <input class="form-control" 
             type="text" 
